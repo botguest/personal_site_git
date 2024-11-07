@@ -1,0 +1,209 @@
+/* Basic layout adjustments */
+body {
+    padding-top: 60px;  /* Add padding to account for fixed navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black; /* Black background for the entire page */
+    font-family: monospace;
+}
+
+.crt-screen {
+    margin-top: 20px; /* Adjust this value as needed */
+    width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: black; /* Black background for the CRT screen */
+    border: 3px solid #0f0;
+    position: relative;
+    overflow: auto;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5), inset 0 0 10px rgba(0, 255, 0, 0.7);
+    border-radius: 15px;
+    color: #0f0;
+}
+
+/* Centering the image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.crt-image {
+    width: 50%; /* Adjust as needed */
+    filter: sepia(1) hue-rotate(85deg) brightness(1) contrast(2) saturate(3.5); /* Brighter green overlay */
+    opacity: 0.9;
+    border: 3px solid #0f0;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 1), inset 0 0 10px rgba(0, 255, 0, 0.9);
+    border-radius: 10px;
+}
+
+/* Stronger CRT effect without background scanlines */
+.crt-screen::after {
+    content: ''; /* Remove any visual effects by setting a blank content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none; /* Ensures no background color or lines are added */
+    pointer-events: none;
+}
+
+/* Text styling */
+.terminal {
+    font-size: 1.7vw;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    padding: 20px;
+    color: #0f0;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: black; /* Dark background for the navbar */
+    border-bottom: 3px solid #0f0;
+    position: fixed;  /* Fix the navbar at the top */
+    top: 0;
+    width: 100%;  /* Full-width */
+    z-index: 1000;  /* Ensures it stays on top of other elements */
+}
+
+.navbar a {
+    color: #0f0;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #00ff00; /* Brighter green on hover */
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+/* Style the form labels and inputs */
+label, input[type="password"], input[type="url"], input[type="file"], textarea {
+    color: #0f0; /* Green text color */
+    background-color: black; /* Black background to match the CRT theme */
+    border: 2px solid #0f0; /* Green border */
+    padding: 10px;
+    margin: 10px 0;
+    font-family: monospace;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+/* Style the buttons */
+button[type="submit"] {
+    background-color: black;
+    color: #0f0;
+    border: 2px solid #0f0;
+    padding: 10px 20px;
+    font-family: monospace;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), inset 0 0 5px rgba(0, 255, 0, 0.7);
+}
+
+button[type="submit"]:hover {
+    color: #00ff00; /* Slightly brighter green on hover */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 1), inset 0 0 5px rgba(0, 255, 0, 0.9);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;  /* Vertically align label and input */
+    margin-bottom: 15px;  /* Space between form fields */
+    flex-wrap: wrap;      /* Allows wrapping for smaller screens */
+}
+
+.form-group label {
+    flex: 0 0 auto;       /* Label takes only as much width as needed */
+    margin-right: 10px;   /* Space between label and input */
+    font-size: 1em;
+    color: #0f0;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+textarea, input[type="url"], input[type="file"] {
+    flex: 1;              /* Input/textarea takes up remaining space */
+    min-width: 200px;     /* Sets a minimum width for smaller screens */
+    background-color: black;
+    color: #0f0;
+    border: 2px solid #0f0;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5), inset 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+textarea {
+    height: 100px;        /* Height for the textarea */
+}
+
+button[type="submit"], button[type="button"] {
+    background-color: black;
+    color: #0f0;
+    border: 2px solid #0f0;
+    padding: 10px 20px;
+    font-family: monospace;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), inset 0 0 5px rgba(0, 255, 0, 0.7);
+    flex: 1;  /* Allow button to scale and take available space */
+    margin-top: 10px;
+    align-self: flex-start;  /* Align button to the start if used in a flex container */
+}
+
+button[type="submit"]:hover {
+    color: #00ff00;  /* Slightly brighter green on hover */
+    box-shadow: 0 0 50px rgba(0, 255, 0, 1), inset 0 0 5px rgba(0, 255, 0, 0.9);
+}
+
+hr {
+    border: none;                 /* Remove the default border */
+    height: 2px;                  /* Set the thickness of the line */
+    background-color: #0f0;       /* Green color for the line */
+    margin: 20px 0;               /* Add some space above and below the line */
+    box-shadow: 0 0 10px #0f0,    /* Outer glow effect */
+                0 0 20px #0f0,    /* Stronger outer glow */
+                inset 0 0 5px #0f0; /* Inner glow */
+}
+
+/*Jingxing: below are css code for flashing*/
+@keyframes flashEffect {
+    0% { opacity: 0; }       /* Dim */
+    50% { opacity: 1; }        /* Bright */
+    70% { opacity: 1; }        /* Disappear */
+    100% { opacity: 0; }     /* Back to Dim */
+}
+
+.flashing {
+    animation: flashEffect 2s infinite;  /* Animation with infinite repeat */
+    color: #0f0;  /* Adjust color to match your CRT theme, green here */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 255, 0, 0.6); /* Glow effect */
+}
+/*Jingxing: above are css code for flashing*/
+
+

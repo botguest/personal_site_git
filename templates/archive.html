@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css_style.css') }}">
+    <title>Archive - PersonLink By BotGuest</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('archive') }}">Archive</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('about') }}">About_This_Site</a>
+        <a href="{{ url_for('follow') }}">Follow</a>
+        <a href="{{ url_for('follower_login') }}">Follower_Login</a>
+        <a href="{{ url_for('manager') }}">Manager_Login</a>
+    </nav>
+
+    <div class="crt-screen">
+       <div class="terminal">
+            <p>>>> LOADING ARCHIVE HIGHLIGHTS...</p>
+            <p>>>> WARNING. *HIGHLIGHTS* CURRENTLY UNAVAILABLE.</p>
+           <p>>>> LOADING MESSAGE RETURNED... </p>
+           <p>------ Currently Under Construction</p>
+           <p>------ Contact Admin BotGuest (JINGXING XU)</p>
+        <p>>>> <span class="flashing">*DONE*</span></p>
+       <br>
+       <p>>>> LOADING POSTS...
+
+
+        {% for post in posts %}
+            <div class="post">
+                <p>{{ post.content }}</p>
+                {% if post.link %}
+                    <p><a href="{{ post.link }}" target="_blank">{{ post.link }}</a></p>
+                {% endif %}
+                <div class = image-container>
+                    {% if post.image_filename %}
+                        <img src="{{ url_for('static', filename='uploads/' ~ post.image_filename) }}" alt="Posted Image" class="crt-image">
+                    {% endif %}
+                </div>>
+                <!-- Delete button only visible if logged in as manager -->
+                {% if session.get('logged_in') %}
+                    <form action="{{ url_for('delete_post', post_id=post.id) }}" method="post" style="display:inline;">
+                        <button type="submit" onclick="return confirm('Are you sure you want to delete this post?');">Delete</button>
+                    </form>
+                {% endif %}
+            </div>
+            <hr>
+        {% endfor %}
+       <br>
+       <p>>>> <span class="flashing">*DONE*</span></p>
+        </div>
+
+    </div>
+</body>
+</html>
