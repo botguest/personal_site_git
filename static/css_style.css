@@ -70,6 +70,19 @@ body {
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
 }
 
+/* Text (Auxillery Styling) */
+.terminal-aux {
+    /* diff font too */
+    font-family: Helvetica, monospace;
+
+    font-size: 1vw;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    padding: 20px;
+    color: rgba(0, 255, 0, 0.3); /* smaller */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
 /* Navbar styling */
 .navbar {
     display: flex;
