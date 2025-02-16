@@ -81,6 +81,8 @@ body {
     top: 0;
     width: 100%;  /* Full-width */
     z-index: 1000;  /* Ensures it stays on top of other elements */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of navbar items */
 }
 
 .navbar a {
