@@ -68,6 +68,11 @@ body {
     padding: 20px;
     color: #0f0;
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+
+    max-width: 70%; /* Limits width to 70% of the screen */
+    margin: 0 auto; /* Centers the text block */
+    padding-left: 5%; /* Adds padding from the left */
+    padding-right: 5%; /* Adds padding from the right */
 }
 
 /* Text (Auxillery Styling) */
@@ -81,6 +86,25 @@ body {
     padding: 20px;
     color: rgba(0, 255, 0, 0.3); /* smaller */
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.4), 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+/* Text (Headers) */
+.terminal-head {
+    font-family: "American Typewriter",  monospace;
+
+    font-size: 1.5vw;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    padding: 20px;
+    color: #0f0;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+
+    max-width: 90%; /* Limits width to 70% of the screen */
+    margin: 0 auto; /* Centers the text block */
+    padding-left: 5%; /* Adds padding from the left */
+    padding-right: 5%; /* Adds padding from the right */
+
+    text-decoration: underline;
 }
 
 /* Navbar styling */
