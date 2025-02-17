@@ -241,6 +241,14 @@ hr {
     color: #0f0;  /* Adjust color to match your CRT theme, green here */
     text-shadow: 0 0 5px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 255, 0, 0.6); /* Glow effect */
 }
+
+a {
+    color: blue; /* Default blue color */
+}
+
+a:visited {
+    color: red; /* Make visited links red */
+}
 /*Jingxing: above are css code for flashing*/
 
 
