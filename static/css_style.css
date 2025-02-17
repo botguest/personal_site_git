@@ -87,11 +87,11 @@ body {
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.4), 0 0 10px rgba(0, 255, 0, 0.2);
 }
 
-/* Text (Headers) */
+/* Text (Headers) Supposed to be used inside terminal. */
 .terminal-head {
     font-family: "American Typewriter",  monospace;
 
-    font-size: 1.3vw;
+    font-size: 2vw;
     line-height: 1.4;
     letter-spacing: 2px;
     color: #0f0;
@@ -99,7 +99,10 @@ body {
 
     text-decoration: underline;
 
-    margin: 0 auto; /* Centers the text block */
+    /* Centers the text block */
+
+    width: 110%;
+    margin: 0 auto 0 -5%;
 }
 
 /* Navbar styling */
