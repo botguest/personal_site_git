@@ -65,13 +65,13 @@ body {
     font-size: 1vw;
     line-height: 1.4;
     letter-spacing: 2px;
-    color: rgba(0, 200, 0);
+    color: rgba(0, 235, 0);
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
 
-    max-width: 70%; /* Limits width to 70% of the screen */
+    max-width: 85%; /* Limits width to 70% of the screen */
     margin: 0 auto; /* Centers the text block */
-    padding-left: 5%; /* Adds padding from the left */
-    padding-right: 5%; /* Adds padding from the right */
+    padding-left: 10%; /* Adds padding from the left */
+    padding-right: 10%; /* Adds padding from the right */
 }
 
 /* Text (Auxillery Styling) */
@@ -83,7 +83,7 @@ body {
     line-height: 1.4;
     letter-spacing: 2px;
     padding: 20px;
-    color: rgba(0, 100, 0); /* smaller */
+    color: rgba(0, 150, 0); /* smaller */
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.4), 0 0 10px rgba(0, 255, 0, 0.2);
 }
 
@@ -97,12 +97,9 @@ body {
     color: #0f0;
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
 
-    max-width: 90%; /* Limits width to 70% of the screen */
-    margin: 0 auto; /* Centers the text block */
-    padding-left: 2%; /* Adds padding from the left */
-    padding-right: 2%; /* Adds padding from the right */
-
     text-decoration: underline;
+
+    margin: 0 auto; /* Centers the text block */
 }
 
 /* Navbar styling */
