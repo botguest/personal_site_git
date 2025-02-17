@@ -242,11 +242,11 @@ hr {
     text-shadow: 0 0 5px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 255, 0, 0.6); /* Glow effect */
 }
 
-a {
+.terminal a {
     color: blue; /* Default blue color */
 }
 
-a:visited {
+.terminal a:visited {
     color: red; /* Make visited links red */
 }
 /*Jingxing: above are css code for flashing*/
