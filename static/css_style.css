@@ -107,7 +107,7 @@ body {
 
 /* Navbar styling */
 .navbar {
-    display: flex;
+    display: none; /* was flex*/
     justify-content: center;
     padding: 15px;
     background-color: black; /* Dark background for the navbar */

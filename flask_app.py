@@ -14,8 +14,12 @@ db = SQLAlchemy(app)
 # Define your password here
 MANAGER_PASSWORD_HASH = generate_password_hash("61069856")
 
-UPLOAD_FOLDER = '/home/botguest/personal_site/personal_site/static/uploads'
+# alt between these two comments to run on server vs local.
+#UPLOAD_FOLDER = '/home/botguest/personal_site/personal_site/static/uploads'
+#os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+UPLOAD_FOLDER = '/Users/jingxingxu/Desktop/Productivity/job/personal_site_git/static/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 first_visit = True
@@ -121,7 +125,13 @@ def logout():
     session.clear()  # Clears all session data
     return redirect(url_for('home'))
 
-
+# alt for local & online environ
+'''
 if __name__ == '__main__':
     db.create_all()
     app.run()
+'''
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
